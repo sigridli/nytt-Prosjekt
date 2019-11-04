@@ -74,45 +74,45 @@ let tipsliste = [
 ]
 
 function main() {
-  let wrapper = document.createElement("div")
-
-  let section = document.createElement("section")
-  section.setAttribute("id", "tips_innledning")
-  section.setAttribute("class", "pakketilbud")
-  let contentpakke = document.createElement("div")
-  contentpakke.setAttribute("class", "contentpakke")
-  let headerpakke = document.createElement("h2")
-  headerpakke.setAttribute("class", "headerpakke")
-  headerpakke.innerHTML = "Tips"
-  let tekst = document.createElement("p")
-  tekst.innerHTML = "Trondheim har mye å by på for alle og enhver. Her kan du velge hva du er interessert i og se et utvalg av steder i Trondheim som passer perfekt for deg!"
-
-  contentpakke.appendChild(headerpakke)
-  contentpakke.appendChild(tekst)
-
-  let dropdown = document.createElement("select")
-  dropdown.setAttribute("id", "tips_valg")
-  dropdown.setAttribute("onchange", "visGruppe()")
-  let valueAll = document.createElement("option")
-  valueAll.setAttribute("value", "alle")
-  valueAll.innerHTML = "Se alle"
-  dropdown.appendChild(valueAll)
-  let value1 = document.createElement("option")
-  value1.setAttribute("value", "sosialt")
-  value1.innerHTML = "Sosialt"
-  dropdown.appendChild(value1)
-  let value2 = document.createElement("option")
-  value2.setAttribute("value", "matogdrikke")
-  value2.innerHTML = "Mat og drikke"
-  dropdown.appendChild(value2)
-  let value3 = document.createElement("option")
-  value3.setAttribute("value", "uteaktiviteter")
-  value3.innerHTML = "Uteaktiviteter"
-  dropdown.appendChild(value3)
-
-  contentpakke.appendChild(dropdown)
-  section.appendChild(contentpakke)
-  wrapper.appendChild(section)
+  // let wrapper = document.createElement("div")
+  //
+  // let section = document.createElement("section")
+  // section.setAttribute("id", "tips_innledning")
+  // section.setAttribute("class", "pakketilbud")
+  // let contentpakke = document.createElement("div")
+  // contentpakke.setAttribute("class", "contentpakke")
+  // let headerpakke = document.createElement("h2")
+  // headerpakke.setAttribute("class", "headerpakke")
+  // headerpakke.innerHTML = "Tips"
+  // let tekst = document.createElement("p")
+  // tekst.innerHTML = "Trondheim har mye å by på for alle og enhver. Her kan du velge hva du er interessert i og se et utvalg av steder i Trondheim som passer perfekt for deg!"
+  //
+  // contentpakke.appendChild(headerpakke)
+  // contentpakke.appendChild(tekst)
+  //
+  // let dropdown = document.createElement("select")
+  // dropdown.setAttribute("id", "tips_valg")
+  // dropdown.setAttribute("onchange", "visGruppe()")
+  // let valueAll = document.createElement("option")
+  // valueAll.setAttribute("value", "alle")
+  // valueAll.innerHTML = "Se alle"
+  // dropdown.appendChild(valueAll)
+  // let value1 = document.createElement("option")
+  // value1.setAttribute("value", "sosialt")
+  // value1.innerHTML = "Sosialt"
+  // dropdown.appendChild(value1)
+  // let value2 = document.createElement("option")
+  // value2.setAttribute("value", "matogdrikke")
+  // value2.innerHTML = "Mat og drikke"
+  // dropdown.appendChild(value2)
+  // let value3 = document.createElement("option")
+  // value3.setAttribute("value", "uteaktiviteter")
+  // value3.innerHTML = "Uteaktiviteter"
+  // dropdown.appendChild(value3)
+  //
+  // contentpakke.appendChild(dropdown)
+  // section.appendChild(contentpakke)
+  // wrapper.appendChild(section)
 
 
   for (let i of tipsliste){
@@ -136,8 +136,8 @@ function main() {
     div.appendChild(p)
     pakketilbud.appendChild(img)
     pakketilbud.appendChild(div)
-    wrapper.appendChild(pakketilbud)
-    document.body.appendChild(wrapper)
+    // wrapper.appendChild(pakketilbud)
+    document.body.appendChild(pakketilbud)
 
     h2.innerHTML = i.overskrift
     p.innerHTML = i.kontekst
