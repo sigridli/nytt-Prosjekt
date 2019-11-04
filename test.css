@@ -1,0 +1,584 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  font-family: 'Armata', sans-serif;
+  font-size: 1em;
+  background-color:#F5F5F5;
+  color: #202020;
+}
+
+
+/*navbar*/
+label{
+  display: block;
+}
+
+.menu{
+  text-align: center;
+  width: 100%;
+  display: none;
+
+}
+
+.menu a{
+  display: block;
+  margin: 0;
+  text-decoration: none;
+}
+
+#toggle:checked + .menu{
+  display: block;
+}
+
+/*FOOTER*/
+
+footer{
+  background-color: #F2F1EC;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100vw;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+#logofooter{
+  order:1;
+  width: 100px;
+  position: relative;
+  top: -95px;
+  max-height: 100px;
+}
+.adresse{
+  order: 2;
+  width: 150px;
+}
+.kontakt{
+  width: 150px;
+}
+
+
+
+
+
+  /*PAKKETILBUD (+TIPS)*/
+.alt{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.pakketilbud{
+  padding-top: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.contentpakke{
+  padding: 60px;
+}
+
+.imgpakketilbud{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.headerpakke{
+  padding-bottom: 20px;
+  padding-top: 10px;
+  font-size: 2em;
+}
+
+.bestill{
+  letter-spacing: 2px;
+  padding: 1em;
+  border:1px;
+  background:#030303;
+  color: #F5F5F5;
+  padding:1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 15px;
+  float:right;
+}
+
+.bestill:hover{
+  padding: 1em;
+}
+
+/*TIPS*/
+
+#tips_innledning {
+  display: flex !important;
+
+}
+
+.paragraf_tips{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+/*KONTAKT*/
+
+.overskrift{
+  margin: 60px 0px 30px 0px;
+  font-weight: normal;
+}
+
+#contentkontakt{
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  padding: 5%;
+}
+
+#kontor{
+  box-shadow: 5px 5px 15px darkgrey;
+}
+
+.innhold{
+  width: 100%;
+}
+
+
+/* BESTILLING */
+
+#bekreftelse {
+  /* visibility: hidden;  */
+  background-color: black;
+  color: white;
+  padding: 20px;
+  width: 60%;
+  text-align: center;
+}
+
+#pakkelink {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#pakkelink:hover {
+  color: gray;
+  text-decoration: underline;
+}
+
+#pakkelink:visited {
+  color: #080808;
+}
+
+#pakkelink:active {
+  color: #282828;
+}
+
+.bestill_body{
+  margin: 200px;
+  padding: 10px;
+}
+
+/* .select_bestill {
+  position: relative;
+} */
+
+.select_bestill select { /* Dropdown */
+  background: white;
+  padding: 10px;
+  width: 250px;
+  font-size: 1em;
+  font-family: 'Armata', sans-serif;
+  /* outline: none; */
+}
+
+/* .select_bestill:before {
+  content: '\f078';
+  font-family: "FontAwesome";
+  font-size: 23px;
+  color:#aaa;
+  position: absolute;
+  left: 195px;
+  top: 12px;
+  height: 40px;
+  width: 50px;
+  text-align: center;
+  pointer-events: none;
+} */
+
+.boks { /* Blir mer mellomrom mellom input */
+  margin: 15px 0px 10px 0px;
+}
+.bestill_innledning {
+  margin-bottom: 20px;
+}
+
+.bestill_labels {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#alle_input{
+  display: flex;
+  flex-direction: column;
+}
+
+.bestill_input { /* Alle input */
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background: white;
+  font-size: 1em;
+  font-family: 'Armata', sans-serif;
+  padding: 3px;
+}
+
+#dato, #deltakere, #pris {
+  width: 30%;
+  font-size: 1em;
+  font-family: 'Armata', sans-serif;
+  padding: 3px;
+}
+
+#kommentarer {
+  height: 100px;
+}
+
+
+
+/*GALLERI*/
+
+.column img{
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+
+@media only screen and (min-width: 650px) {
+  .imgpakketilbud{
+    width: 100%;
+    height: 700px;
+  }
+}
+
+
+/*DESKTOP*/
+@media only screen and (min-width: 1100px) {
+
+  footer{
+    padding: 10px;
+  }
+
+  #logofooter{
+    width: 150px;
+    max-height: 150px;
+  }
+
+  /*FORSIDE*/
+  /* container til slideshow*/
+  .slideshow-container {
+    box-sizing: border-box;
+    position: relative;
+    margin: auto;
+  }
+
+  .mySlides {
+    display: none; /* gjemmer bildene til defualt */
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+
+  .forsidebildet{
+    height: 600px;
+    width: 100%;
+  }
+
+  @keyframes fade { /*bildene skal ha en fading overgang*/
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  #p1{
+    float: left;
+    width: 45%;
+    margin: 5px;
+  }
+  #p2{
+    float: right;
+    width: 45%;
+    margin: 5px;
+  }
+  .tekst{
+    font-size: 16px;
+    line-height: 1.5;
+    width: 95%;
+    margin: 2% auto 5%;
+    margin-bottom: 10%;
+  }
+
+/*PAKKETILBUD*/
+  .pakketilbud{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   padding-top: 100px;
+   padding-bottom: 100px;
+   padding-right: 10%;
+   padding-left: 10%;
+  }
+
+  .imgpakketilbud{
+    width: 500px;
+    height:700px;
+    object-fit: cover;
+    padding: 30px;
+  }
+
+  .contentpakke{
+    padding: 40px;
+    margin: 30px;
+  }
+
+  .headerpakke{
+    font-size: 200%;
+    padding-bottom: 40px;
+    padding-top: 60px;
+    width: 300px;
+  }
+
+  .bestill{
+    transition: padding 0.3s ease-out;
+  }
+
+  .bestill:hover{
+    padding: 1.2em;
+  }
+
+  /*TIPS*/
+
+  #wrapper_tips{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+
+  /*OM OSS*/
+
+  .overskrift{
+    margin: 60px 0px 30px 0px;
+    font-weight: normal;
+  }
+
+  #contentkontakt{
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+  }
+
+  }
+  #kontor{
+    display: block;
+    width: 350px;
+    height: 500px;
+    object-fit: cover;
+    box-shadow: 5px 5px 15px darkgrey;
+    margin: 50px 0px 50px 0px;
+  }
+
+
+  /* GALLERI */
+
+  /*  Lager tre like kolonner som sitter på rekke med hverandre.
+      Bruker flexbox til dette. */
+
+  #row {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .column {
+    flex: 31%;
+    max-width: 31%;
+  }
+
+  .column img {
+    flex-direction: column;
+    transition: transform 0.3s ease-out; /* Bruker 0.3 sekunder på å forstørres. */
+  }
+
+  .img_galleri:hover{
+    transform: scale(1.3); /* Bildene forstørres 1.3 ganger når pila hovrer over de. */
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 10px 20px darkgrey; /* Legger på skyggeeffekt. */
+  }
+
+  /* TIL-TOPPEN-KNAPP */
+
+  #tiltoppen{
+    display: none;
+    position: fixed; /* Knappen skal alltid være tilgjengelig på skjermen, nederst til høyre. */
+    bottom: 10px;
+    right: 20px;
+    z-index: 1000; /* For å være sikker på at knappen går foran alt annet innhold. */
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 15px 8px 15px;
+    border-radius: 50px;
+    font-size: 18px;
+    box-shadow: 4px 4px 8px darkgrey;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #tiltoppen:hover{
+    background-color: orange;
+  }
+
+  /*navbar*/
+  header{
+  background: #F2F1EC;
+  width:100%;
+  margin: 0 auto;
+  font-size:25px;
+  }
+
+  #logo{
+    float: left;
+    position: absolute;
+    margin-left: 20px;
+    width: 200px;
+    float: left;
+    z-index: 10; /*flytter logoen frem foran blidene*/
+  }
+
+  .nav{
+    height: 80px;
+  }
+
+  .nav ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-left: 80px;
+    text-decoration: none;
+
+  }
+  .menu{
+    display: block;
+  }
+
+  .nav li{
+    display: inline-block;
+    margin-left: 90px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+
+
+  .nav a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .nav li:hover {
+    border-bottom: solid 3px #444;
+    font-weight: bold;
+  }
+
+
+  a:visited {
+    font-weight: bold;
+  }
+
+  .nav:hover{
+    color: #000;
+  }
+
+  /*header{
+  background: #EEEE;
+  width:100%;
+  margin: 0 auto;
+  font-size:18pt;
+  }
+
+  #logo{
+    float: left;
+    position: absolute;
+    margin-left: 20px;
+  }
+
+  .nav{
+    height: 80px;
+  }
+
+  .nav ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-left: 80px;
+    text-decoration: none;
+
+  }
+
+  .nav li{
+    display: inline-block;
+    margin-left: 90px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  #logo{
+    width: 200px;
+    float: left;
+  }
+
+  .nav a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .nav li:hover {
+    border-bottom: solid 3px #444;
+    font-weight: bold;
+  }
+
+
+  a:visited {
+    font-weight: bold;
+  }
+
+  .nav:hover{
+    color: #000;
+  }*/
+
+  /* label{
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: left;
+  } */
+
+  #toggle{
+    display: none;
+  }
